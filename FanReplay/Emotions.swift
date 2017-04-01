@@ -52,6 +52,7 @@ class Emotions
 			}
 			self.peoplePresent += 1;
 		}
+		
 		_balanceData();
 	}
 	
@@ -59,27 +60,42 @@ class Emotions
 	{
 		print("-- -- -- Average Emotions in Picture -- -- --");
 		print("Total Faces in this picture: \(Int(self.peoplePresent))");
-		print("anger : \(Int(self.anger * 100))%");
-		print("fear : \(Int(self.fear * 100))%");
-		print("surprise : \(Int(self.surprise * 100))%");
-		print("contempt : \(Int(self.contempt * 100))%");
-		print("disgust : \(Int(self.disgust * 100))%");
-		print("happiness : \(Int(self.happiness * 100))%");
-		print("neutral : \(Int(self.neutral * 100))%");
-		print("sadness : \(Int(self.sadness * 100))%");
+		print("anger : \(Int(self.anger))%");
+		print("fear : \(Int(self.fear))%");
+		print("surprise : \(Int(self.surprise))%");
+		print("contempt : \(Int(self.contempt))%");
+		print("disgust : \(Int(self.disgust))%");
+		print("happiness : \(Int(self.happiness))%");
+		print("neutral : \(Int(self.neutral))%");
+		print("sadness : \(Int(self.sadness))%");
 		print("-- -- -- -- -- -- --  -- -- -- -- -- -- -- --");
 	}
 	
+//	func sortedEmotions() -> [String : Int]
+//	{
+//		var to_return = [String : Int]();
+//		to_return["anger"] = Int(self.anger);
+//		to_return["fear"] = Int(self.fear);
+//		to_return["surprise"] = Int(self.surprise);
+//		to_return["contempt"] = Int(self.contempt);
+//		to_return["disgust"] = Int(self.disgust);
+//		to_return["happiness"] = Int(self.happiness);
+//		to_return["neutral"] = Int(self.neutral);
+//		to_return["sadness"] = Int(self.sadness);
+//		return to_return.sorted { (first: (k1: String, v1: Int), second: (k2: String, v2: Int)) -> Bool in
+//			return to_return[first.k1]! > to_return[second.k2]!;
+//		}
+//	}
+	
 	private func _balanceData()
 	{
-		self.anger = self.anger/peoplePresent;
-		self.fear = self.anger/peoplePresent;
-		self.surprise = self.surprise/peoplePresent;
-		self.contempt = self.contempt/peoplePresent;
-		self.disgust = self.disgust/peoplePresent;
-		self.happiness = self.happiness/peoplePresent;
-		self.neutral = self.neutral/peoplePresent;
-		self.sadness = self.sadness/peoplePresent;
-		
+		self.anger = (self.anger*100/peoplePresent).rounded();
+		self.fear = (self.fear*100/peoplePresent).rounded();
+		self.surprise = (self.surprise*100/peoplePresent).rounded();
+		self.contempt = (self.contempt*100/peoplePresent).rounded();
+		self.disgust = (self.disgust*100/peoplePresent).rounded();
+		self.happiness = (self.happiness*100/peoplePresent).rounded();
+		self.neutral = (self.neutral*100/peoplePresent).rounded();
+		self.sadness = (self.sadness*100/peoplePresent).rounded();
 	}
 }
