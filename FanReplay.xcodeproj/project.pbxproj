@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		198F9F871E8FDB64004B515C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F861E8FDB64004B515C /* AppDelegate.swift */; };
+		198F9F891E8FDB64004B515C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F881E8FDB64004B515C /* ViewController.swift */; };
+		198F9F8B1E8FDB64004B515C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198F9F8A1E8FDB64004B515C /* Assets.xcassets */; };
+		198F9F8E1E8FDB64004B515C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198F9F8C1E8FDB64004B515C /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		198F9F831E8FDB64004B515C /* FanReplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FanReplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		198F9F861E8FDB64004B515C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		198F9F881E8FDB64004B515C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		198F9F8A1E8FDB64004B515C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		198F9F8D1E8FDB64004B515C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		198F9F8F1E8FDB64004B515C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		198F9F801E8FDB64004B515C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		198F9F7A1E8FDB64004B515C = {
+			isa = PBXGroup;
+			children = (
+				198F9F851E8FDB64004B515C /* FanReplay */,
+				198F9F841E8FDB64004B515C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		198F9F841E8FDB64004B515C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				198F9F831E8FDB64004B515C /* FanReplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		198F9F851E8FDB64004B515C /* FanReplay */ = {
+			isa = PBXGroup;
+			children = (
+				198F9F861E8FDB64004B515C /* AppDelegate.swift */,
+				198F9F881E8FDB64004B515C /* ViewController.swift */,
+				198F9F8A1E8FDB64004B515C /* Assets.xcassets */,
+				198F9F8C1E8FDB64004B515C /* Main.storyboard */,
+				198F9F8F1E8FDB64004B515C /* Info.plist */,
+			);
+			path = FanReplay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		198F9F821E8FDB64004B515C /* FanReplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 198F9F921E8FDB64004B515C /* Build configuration list for PBXNativeTarget "FanReplay" */;
+			buildPhases = (
+				198F9F7F1E8FDB64004B515C /* Sources */,
+				198F9F801E8FDB64004B515C /* Frameworks */,
+				198F9F811E8FDB64004B515C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FanReplay;
+			productName = FanReplay;
+			productReference = 198F9F831E8FDB64004B515C /* FanReplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		198F9F7B1E8FDB64004B515C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "The Possimpibles";
+				TargetAttributes = {
+					198F9F821E8FDB64004B515C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K7J5MR94GS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 198F9F7E1E8FDB64004B515C /* Build configuration list for PBXProject "FanReplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 198F9F7A1E8FDB64004B515C;
+			productRefGroup = 198F9F841E8FDB64004B515C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				198F9F821E8FDB64004B515C /* FanReplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		198F9F811E8FDB64004B515C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198F9F8B1E8FDB64004B515C /* Assets.xcassets in Resources */,
+				198F9F8E1E8FDB64004B515C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		198F9F7F1E8FDB64004B515C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198F9F891E8FDB64004B515C /* ViewController.swift in Sources */,
+				198F9F871E8FDB64004B515C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		198F9F8C1E8FDB64004B515C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				198F9F8D1E8FDB64004B515C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		198F9F901E8FDB64004B515C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		198F9F911E8FDB64004B515C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		198F9F931E8FDB64004B515C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K7J5MR94GS;
+				INFOPLIST_FILE = FanReplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lahacks17.FanReplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		198F9F941E8FDB64004B515C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K7J5MR94GS;
+				INFOPLIST_FILE = FanReplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lahacks17.FanReplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		198F9F7E1E8FDB64004B515C /* Build configuration list for PBXProject "FanReplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198F9F901E8FDB64004B515C /* Debug */,
+				198F9F911E8FDB64004B515C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		198F9F921E8FDB64004B515C /* Build configuration list for PBXNativeTarget "FanReplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198F9F931E8FDB64004B515C /* Debug */,
+				198F9F941E8FDB64004B515C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 198F9F7B1E8FDB64004B515C /* Project object */;
+}
