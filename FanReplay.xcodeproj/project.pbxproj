@@ -12,6 +12,7 @@
 		198F9F8B1E8FDB64004B515C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198F9F8A1E8FDB64004B515C /* Assets.xcassets */; };
 		198F9F8E1E8FDB64004B515C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198F9F8C1E8FDB64004B515C /* Main.storyboard */; };
 		198F9F9A1E8FF5CC004B515C /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F991E8FF5CC004B515C /* API.m */; };
+		198F9F9F1E90300E004B515C /* Emotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F9E1E90300E004B515C /* Emotions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		198F9F981E8FF5CC004B515C /* FanReplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FanReplay-Bridging-Header.h"; sourceTree = "<group>"; };
 		198F9F991E8FF5CC004B515C /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		198F9F9D1E9003BF004B515C /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		198F9F9E1E90300E004B515C /* Emotions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				198F9F9D1E9003BF004B515C /* API.h */,
 				198F9F991E8FF5CC004B515C /* API.m */,
 				198F9F981E8FF5CC004B515C /* FanReplay-Bridging-Header.h */,
+				198F9F9E1E90300E004B515C /* Emotions.swift */,
 			);
 			path = FanReplay;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				198F9F9A1E8FF5CC004B515C /* API.m in Sources */,
 				198F9F891E8FDB64004B515C /* ViewController.swift in Sources */,
 				198F9F871E8FDB64004B515C /* AppDelegate.swift in Sources */,
+				198F9F9F1E90300E004B515C /* Emotions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

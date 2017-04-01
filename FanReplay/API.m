@@ -64,7 +64,7 @@
 			NSLog(@"Could not parse loaded json with error:%@", error);
 		}
 		
-//		NSLog(@"%@", json);
+//		NSLog(@"--->%@", json);
 		_connectionData = nil;
 		
 		return json;
