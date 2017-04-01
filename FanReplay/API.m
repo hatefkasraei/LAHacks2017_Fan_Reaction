@@ -11,7 +11,7 @@
 @implementation api
 
 
-- (NSMutableDictionary*) getEmotionsJSON: (NSString*) imageURL
+- (NSJSONSerialization*) getEmotionsJSON: (NSString*) imageURL
 {
 //	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
@@ -50,7 +50,7 @@
 	else
 	{
 		NSError* error = nil;
-		NSMutableDictionary* json = nil;
+		NSJSONSerialization* json = nil;
 		NSString* dataString = [[NSString alloc] initWithData:_connectionData encoding:NSUTF8StringEncoding];
 		NSLog(@"%@", dataString);
 		
@@ -64,7 +64,7 @@
 			NSLog(@"Could not parse loaded json with error:%@", error);
 		}
 		
-		NSLog(@"%@", json);
+//		NSLog(@"%@", json);
 		_connectionData = nil;
 		
 		return json;
@@ -72,6 +72,8 @@
 	
 	return nil;
 }
+
+
 
 
 @end

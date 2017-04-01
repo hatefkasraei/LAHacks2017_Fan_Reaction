@@ -13,7 +13,9 @@
 
 @interface api : NSObject
 
--(NSMutableDictionary*) getEmotionsJSON: (NSString*)imageURL;
+
+-(NSJSONSerialization*) getEmotionsJSON: (NSString*)imageURL;
+
 
 @end
 
