@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
-@interface api : NSObject
+@interface API : NSObject
 
 -(NSJSONSerialization*) getJSONwithURL: (NSString*)imageURL;
 
