@@ -72,17 +72,39 @@ import Foundation
 		print("-- -- -- -- -- -- --  -- -- -- -- -- -- -- --");
 	}
 	
-	func diffCheckWith(emotion : Emotions) -> [String : Double]
+	func diffCheckWith(newEmotion : Emotions) -> [String : Double]
 	{
 		var to_return = [String : Double]()
-		to_return["anger"] = emotion.anger - self.anger
-		to_return["fear"] = emotion.fear - self.fear
-		to_return["surprise"] = emotion.surprise - self.surprise
-		to_return["disgust"] = emotion.disgust - self.disgust
-		to_return["happiness"] = emotion.happiness - self.happiness
-		to_return["neutral"] = emotion.neutral - self.neutral
-		to_return["sadness"] = emotion.sadness - self.sadness
+		to_return["anger"] = newEmotion.anger - self.anger
+		to_return["fear"] = newEmotion.fear - self.fear
+		to_return["surprise"] = newEmotion.surprise - self.surprise
+		to_return["disgust"] = newEmotion.disgust - self.disgust
+		to_return["happiness"] = newEmotion.happiness - self.happiness
+		to_return["neutral"] = newEmotion.neutral - self.neutral
+		to_return["sadness"] = newEmotion.sadness - self.sadness
 		return to_return
+	}
+	
+	func didEmotionsChangeDramatically(newEmotion : Emotions) -> Bool
+	{
+		let diff = self.diffCheckWith(newEmotion: newEmotion)
+		
+		print(diff["happiness"]!);
+		
+		if diff["anger"]! > 50.0
+		{
+			return true;
+		}
+		if diff["fear"]! > 50.0
+		{
+			return true;
+		}
+		if diff["happiness"]! > 50.0
+		{
+			return true;
+		}
+		
+		return false;
 	}
 	
 	private func _balanceData()
