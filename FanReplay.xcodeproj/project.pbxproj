@@ -62,11 +62,11 @@
 			children = (
 				198F9F861E8FDB64004B515C /* AppDelegate.swift */,
 				198F9F881E8FDB64004B515C /* ViewController.swift */,
-				198F9F9E1E90300E004B515C /* Emotions.swift */,
 				198F9F8A1E8FDB64004B515C /* Assets.xcassets */,
 				198F9F8C1E8FDB64004B515C /* Main.storyboard */,
 				198F9F8F1E8FDB64004B515C /* Info.plist */,
 				198F9FAA1E90B408004B515C /* AVHandlers.swift */,
+				198F9F9E1E90300E004B515C /* Emotions.swift */,
 				198F9F9D1E9003BF004B515C /* API.h */,
 				198F9F991E8FF5CC004B515C /* API.m */,
 				198F9F981E8FF5CC004B515C /* FanReplay-Bridging-Header.h */,

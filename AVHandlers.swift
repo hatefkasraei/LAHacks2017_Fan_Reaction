@@ -26,3 +26,14 @@ func grabFrameAndSaveOnDisk(videoPath : String, timeInSeconds : Double, destinat
 	};
 }
 
+func grabFrameInJPEG(videoPath : String, timeInSeconds : Double) -> NSImage?
+{
+	let imagegenerator = AVAssetImageGenerator(asset: AVAsset(url: URL(fileURLWithPath: videoPath)));
+	
+	if let imageref = try? imagegenerator.copyCGImage(at: CMTime(seconds: timeInSeconds, preferredTimescale: 100), actualTime: nil)
+	{
+			return NSImage(cgImage: imageref, size: NSSize(width: 50, height: 50))
+	};
+	
+	return nil;
+}
