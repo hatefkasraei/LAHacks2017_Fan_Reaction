@@ -10,12 +10,13 @@
 #define API_h
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
 @interface api : NSObject
 
+-(NSJSONSerialization*) getJSONwithURL: (NSString*)imageURL;
 
--(NSJSONSerialization*) getEmotionsJSON: (NSString*)imageURL;
-
+-(NSJSONSerialization*) getJSONwithFile : (NSString*)imagePath;
 
 @end
 
