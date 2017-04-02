@@ -12,11 +12,13 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
-@interface api : NSObject
+@interface API : NSObject
 
 -(NSJSONSerialization*) getJSONwithURL: (NSString*)imageURL;
 
 -(NSJSONSerialization*) getJSONwithFile : (NSString*)imagePath;
+
+-(NSJSONSerialization*) getJSONwithIMAGE : (NSImage*) image;
 
 @end
 
