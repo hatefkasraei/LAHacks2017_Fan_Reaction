@@ -18,6 +18,8 @@
 
 -(NSJSONSerialization*) getJSONwithFile : (NSString*)imagePath;
 
+-(NSJSONSerialization*) getJSONwithIMAGE : (NSImage*) image;
+
 @end
 
 #endif /* API_h */

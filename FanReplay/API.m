@@ -8,7 +8,7 @@
 
 #import "API.h"
 
-@implementation api
+@implementation API
 
 
 - (NSJSONSerialization*) getJSONwithURL: (NSString*) imageURL
@@ -96,6 +96,70 @@
 		// Request body
 	
 	NSImage *image = [[NSImage alloc] initWithContentsOfFile:imagePath];
+	NSData* imageData = [image TIFFRepresentation];
+	NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+	NSNumber *compressionFactor = [NSNumber numberWithFloat:0.9];
+	NSDictionary *imageProps = [NSDictionary dictionaryWithObject:compressionFactor
+														   forKey:NSImageCompressionFactor];
+	imageData = [imageRep representationUsingType:NSJPEGFileType properties:imageProps];
+	
+	
+	[_request setHTTPBody:imageData];
+	
+	NSURLResponse *response = nil;
+	NSError *error = nil;
+	NSData* _connectionData = [NSURLConnection sendSynchronousRequest:_request returningResponse:&response error:&error];
+	
+	if (nil != error)
+	{
+		NSLog(@"\nError: %@", error);
+	}
+	else
+	{
+		NSError* error = nil;
+		NSJSONSerialization* json = nil;
+		NSString* dataString = [[NSString alloc] initWithData:_connectionData encoding:NSUTF8StringEncoding];
+		NSLog(@"%@", dataString);
+		
+		if (nil != _connectionData)
+		{
+			json = [NSJSONSerialization JSONObjectWithData:_connectionData options:NSJSONReadingMutableContainers error:&error];
+		}
+		
+		if (error || !json)
+		{
+			NSLog(@"Could not parse loaded json with error:%@", error);
+		}
+		
+		_connectionData = nil;
+		
+		return json;
+	}
+	
+	return nil;
+}
+
+
+- (NSJSONSerialization*) getJSONwithIMAGE : (NSImage*) image
+{
+	NSString* path = @"https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize";
+	NSArray* array = @[
+					   // Request parameters
+					   @"entities=true",
+					   ];
+	
+	NSString* string = [array componentsJoinedByString:@"&"];
+	path = [path stringByAppendingFormat:@"?%@", string];
+	
+	NSLog(@"%@", path);
+	
+	NSMutableURLRequest* _request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:path]];
+	[_request setHTTPMethod:@"POST"];
+		// Request headers
+	[_request setValue:@"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
+	[_request setValue:@"53ac56fcff704af482b78ae3712e4789" forHTTPHeaderField:@"Ocp-Apim-Subscription-Key"];
+		// Request body
+	
 	NSData* imageData = [image TIFFRepresentation];
 	NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
 	NSNumber *compressionFactor = [NSNumber numberWithFloat:0.9];
