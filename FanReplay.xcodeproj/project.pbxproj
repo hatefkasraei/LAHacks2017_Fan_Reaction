@@ -13,6 +13,7 @@
 		198F9F8E1E8FDB64004B515C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198F9F8C1E8FDB64004B515C /* Main.storyboard */; };
 		198F9F9A1E8FF5CC004B515C /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F991E8FF5CC004B515C /* API.m */; };
 		198F9F9F1E90300E004B515C /* Emotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9F9E1E90300E004B515C /* Emotions.swift */; };
+		30CDC2401E90CC1B008F753F /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC23F1E90CC1B008F753F /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		198F9F991E8FF5CC004B515C /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		198F9F9D1E9003BF004B515C /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		198F9F9E1E90300E004B515C /* Emotions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotions.swift; sourceTree = "<group>"; };
+		30CDC23E1E90CC09008F753F /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		30CDC23F1E90CC1B008F753F /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				198F9F9E1E90300E004B515C /* Emotions.swift */,
 				198F9F8A1E8FDB64004B515C /* Assets.xcassets */,
 				198F9F8C1E8FDB64004B515C /* Main.storyboard */,
+				30CDC23E1E90CC09008F753F /* CustomView.h */,
+				30CDC23F1E90CC1B008F753F /* CustomView.m */,
 				198F9F8F1E8FDB64004B515C /* Info.plist */,
 				198F9F9D1E9003BF004B515C /* API.h */,
 				198F9F991E8FF5CC004B515C /* API.m */,
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30CDC2401E90CC1B008F753F /* CustomView.m in Sources */,
 				198F9F9A1E8FF5CC004B515C /* API.m in Sources */,
 				198F9F891E8FDB64004B515C /* ViewController.swift in Sources */,
 				198F9F871E8FDB64004B515C /* AppDelegate.swift in Sources */,
