@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CustomView.h
 //  Lev
 //
 //  Created by Danny Peng on 4/2/17.
@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@interface CustomView : NSView
 
 @end
-

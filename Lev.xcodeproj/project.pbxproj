@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19ADE29C1E913D5C00E0520D /* Emotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ADE29B1E913D5C00E0520D /* Emotions.swift */; };
+		19ADE29E1E91403900E0520D /* AVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ADE29D1E91403900E0520D /* AVHandler.swift */; };
+		19ADE2A11E91408E00E0520D /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 19ADE2A01E91408E00E0520D /* API.m */; };
 		300928931E9104CE0072F331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 300928921E9104CE0072F331 /* AppDelegate.m */; };
 		300928961E9104CE0072F331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 300928951E9104CE0072F331 /* main.m */; };
 		300928991E9104CE0072F331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300928981E9104CE0072F331 /* ViewController.m */; };
@@ -14,6 +17,8 @@
 		3009289E1E9104CF0072F331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3009289C1E9104CF0072F331 /* Main.storyboard */; };
 		300928A91E9104CF0072F331 /* LevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 300928A81E9104CF0072F331 /* LevTests.m */; };
 		300928B41E9104CF0072F331 /* LevUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 300928B31E9104CF0072F331 /* LevUITests.m */; };
+		301E629A1E911DF5006615F9 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E62991E911DF5006615F9 /* CustomView.m */; };
+		301E629D1E912642006615F9 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301E629C1E912642006615F9 /* Snapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19ADE29B1E913D5C00E0520D /* Emotions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotions.swift; sourceTree = "<group>"; };
+		19ADE29D1E91403900E0520D /* AVHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVHandler.swift; sourceTree = "<group>"; };
+		19ADE29F1E91407500E0520D /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		19ADE2A01E91408E00E0520D /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		3009288E1E9104CE0072F331 /* Lev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300928911E9104CE0072F331 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		300928921E9104CE0072F331 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +58,10 @@
 		300928AF1E9104CF0072F331 /* LevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		300928B31E9104CF0072F331 /* LevUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevUITests.m; sourceTree = "<group>"; };
 		300928B51E9104CF0072F331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		301E62981E911DDD006615F9 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		301E62991E911DF5006615F9 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		301E629B1E912641006615F9 /* Lev-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lev-Bridging-Header.h"; sourceTree = "<group>"; };
+		301E629C1E912642006615F9 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +116,18 @@
 				300928921E9104CE0072F331 /* AppDelegate.m */,
 				300928971E9104CE0072F331 /* ViewController.h */,
 				300928981E9104CE0072F331 /* ViewController.m */,
+				301E629C1E912642006615F9 /* Snapshot.swift */,
 				3009289A1E9104CE0072F331 /* Assets.xcassets */,
 				3009289C1E9104CF0072F331 /* Main.storyboard */,
+				301E62981E911DDD006615F9 /* CustomView.h */,
+				301E62991E911DF5006615F9 /* CustomView.m */,
 				3009289F1E9104CF0072F331 /* Info.plist */,
 				300928941E9104CE0072F331 /* Supporting Files */,
+				301E629B1E912641006615F9 /* Lev-Bridging-Header.h */,
+				19ADE29B1E913D5C00E0520D /* Emotions.swift */,
+				19ADE29D1E91403900E0520D /* AVHandler.swift */,
+				19ADE29F1E91407500E0520D /* API.h */,
+				19ADE2A01E91408E00E0520D /* API.m */,
 			);
 			path = Lev;
 			sourceTree = "<group>";
@@ -205,6 +226,7 @@
 					3009288D1E9104CE0072F331 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8297PCJG83;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					300928A31E9104CF0072F331 = {
@@ -273,8 +295,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				300928991E9104CE0072F331 /* ViewController.m in Sources */,
+				19ADE29E1E91403900E0520D /* AVHandler.swift in Sources */,
+				19ADE2A11E91408E00E0520D /* API.m in Sources */,
+				19ADE29C1E913D5C00E0520D /* Emotions.swift in Sources */,
+				301E629A1E911DF5006615F9 /* CustomView.m in Sources */,
 				300928961E9104CE0072F331 /* main.m in Sources */,
 				300928931E9104CE0072F331 /* AppDelegate.m in Sources */,
+				301E629D1E912642006615F9 /* Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +372,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -392,6 +420,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -412,12 +441,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
 				INFOPLIST_FILE = Lev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DannyPeng.Lev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lev/Lev-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -425,18 +458,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
 				INFOPLIST_FILE = Lev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DannyPeng.Lev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lev/Lev-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		300928BC1E9104CF0072F331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
@@ -451,6 +488,7 @@
 		300928BD1E9104CF0072F331 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
@@ -465,6 +503,7 @@
 		300928BF1E9104CF0072F331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
 				INFOPLIST_FILE = LevUITests/Info.plist;
@@ -478,6 +517,7 @@
 		300928C01E9104CF0072F331 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8297PCJG83;
 				INFOPLIST_FILE = LevUITests/Info.plist;
@@ -507,6 +547,7 @@
 				300928BA1E9104CF0072F331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		300928BB1E9104CF0072F331 /* Build configuration list for PBXNativeTarget "LevTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +556,7 @@
 				300928BD1E9104CF0072F331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		300928BE1E9104CF0072F331 /* Build configuration list for PBXNativeTarget "LevUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +565,7 @@
 				300928C01E9104CF0072F331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,16 +1,17 @@
 //
-//  AppDelegate.h
+//  Snapshot.swift
 //  Lev
 //
 //  Created by Danny Peng on 4/2/17.
 //  Copyright © 2017 Danny Peng. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+import Foundation
 
-
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-
-@end
-
+class Snapshot {
+    
+    
+    func catchImage() {
+        
+    }
+}
