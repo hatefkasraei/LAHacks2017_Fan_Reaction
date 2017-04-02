@@ -9,14 +9,16 @@
 #import <Cocoa/Cocoa.h>
 #import <AVFoundation/AVFoundation.h>
 #import "CustomView.h"
-
+#import "Lev-Swift.h"
+#import "API.h"
 
 @interface ViewController : NSViewController {
     AVCaptureSession *session;
     AVCaptureConnection *video_connection;
     AVCaptureStillImageOutput *still_image_output;
-    
-    
+	Emotions* emotion;
+	API* api;
+	AVIHandler* avi;
 }
 @property (nonatomic, retain)AVCaptureVideoPreviewLayer *preview_layer;
 @property (nonatomic, retain)CustomView *customView1;

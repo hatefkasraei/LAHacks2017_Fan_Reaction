@@ -13,7 +13,8 @@
 
 @implementation ViewController
 
-- (void) viewWillAppear {
+- (void) viewWillAppear
+{
     [super viewDidLoad];
     [super viewWillAppear];
     self.customView1 = [[CustomView alloc] initWithFrame : self.view.bounds];
@@ -21,6 +22,11 @@
     [self.view addSubview:self.customView1];
     [self initCaptureSession];
     [self setupPreviewLayer];
+	
+	emotion = [[Emotions alloc] init];
+	api = [[API alloc] init];
+	avi = [[AVIHandler alloc] init];
+	
 }
 
 - (void)viewDidLoad {
@@ -86,9 +92,19 @@
     }
     [still_image_output captureStillImageAsynchronouslyFromConnection : video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error){
         if (imageDataSampleBuffer != nil){
+			
             NSData *image_data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation : imageDataSampleBuffer];
+			
             NSData *image = [[NSImage alloc] initWithData : image_data];
+			
             self.imageView1.image = image;
+			
+			[emotion readEmotionsWithJson: [api getJSONwithIMAGE: image]];
+			[emotion consolePrint];
+			
+			emotion = [[Emotions alloc] init];
+//			[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/adidas.mp4" start:10.2 end:23.4 destinationPath:@"/Users/hatef/Desktop/fan/outputed/saved.mp4"];
+			
     }
     }];
     
