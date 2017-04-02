@@ -42,8 +42,8 @@ func grabFrameInJPEG(videoPath : String, timeInSeconds : Double) -> NSImage?
 func playBackWithinTimeRange(videoPath : String, start : Double, end : Double, destinationPath : String)
 {
 	var movie = AVAsset(url: URL(fileURLWithPath: videoPath));
-	var videoTrack = movie.tracks(withMediaType: "vide").first!;
-	var audioTrack = movie.tracks(withMediaType: "soun").first!;
+	var assetVideoTrack = movie.tracks(withMediaType: "vide").first!;
+	var assetAudioTrack = movie.tracks(withMediaType: "soun").first!;
 
 	let preferredPreset = AVAssetExportPresetPassthrough
 	
@@ -51,9 +51,6 @@ func playBackWithinTimeRange(videoPath : String, start : Double, end : Double, d
 	
 	let videoCompTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: CMPersistentTrackID())
 	let audioCompTrack = composition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: CMPersistentTrackID())
-	
-	let assetVideoTrack: AVAssetTrack = videoTrack
-	let assetAudioTrack: AVAssetTrack = audioTrack
 	
 	var accumulatedTime = kCMTimeZero
 	var endtime = CMTime(seconds: end, preferredTimescale: 100);
