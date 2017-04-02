@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		
-		grabframe(videoPath: "/Users/hatef/Desktop/messi.mp4", timeInSeconds: 10.42, destinationPath: "/Users/hatef/Desktop/test.png");
+		grabFrameAndSaveOnDisk(videoPath: "/Users/hatef/Desktop/messi.mp4", timeInSeconds: 12.42, destinationPath: "/Users/hatef/Desktop/test.jpg");
 		
 	}
 

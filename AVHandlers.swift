@@ -15,13 +15,13 @@ import CoreGraphics
 
 
 
-func grabframe(videoPath : String, timeInSeconds : Double, destinationPath : String)
+func grabFrameAndSaveOnDisk(videoPath : String, timeInSeconds : Double, destinationPath : String)
 {
 	let imagegenerator = AVAssetImageGenerator(asset: AVAsset(url: URL(fileURLWithPath: videoPath)));
 	
 	if let imageref = try? imagegenerator.copyCGImage(at: CMTime(seconds: timeInSeconds, preferredTimescale: 100), actualTime: nil)
 	{
-		let data = NSBitmapImageRep(cgImage: imageref).representation(using: NSPNGFileType, properties: [String : Any]());
+		let data = NSBitmapImageRep(cgImage: imageref).representation(using: NSJPEGFileType, properties: [String : Any]());
 		try? data?.write(to: URL(fileURLWithPath: destinationPath));
 	};
 }
