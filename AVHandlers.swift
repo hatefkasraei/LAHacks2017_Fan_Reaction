@@ -37,3 +37,43 @@ func grabFrameInJPEG(videoPath : String, timeInSeconds : Double) -> NSImage?
 	
 	return nil;
 }
+
+
+func playBackWithinTimeRange(videoPath : String, start : Double, end : Double, destinationPath : String)
+{
+	var movie = AVAsset(url: URL(fileURLWithPath: videoPath));
+	var assetVideoTrack = movie.tracks(withMediaType: "vide").first!;
+	var assetAudioTrack = movie.tracks(withMediaType: "soun").first!;
+
+	let preferredPreset = AVAssetExportPresetPassthrough
+	
+	let composition = AVMutableComposition()
+	
+	let videoCompTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: CMPersistentTrackID())
+	let audioCompTrack = composition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: CMPersistentTrackID())
+	
+	var accumulatedTime = kCMTimeZero
+	var endtime = CMTime(seconds: end, preferredTimescale: 100);
+	var starttime = CMTime(seconds: start, preferredTimescale: 100);
+
+	let durationOfCurrentSlice = CMTimeSubtract(endtime, starttime)
+	
+	let timeRangeForCurrentSlice = CMTimeRangeMake(starttime, durationOfCurrentSlice)
+
+	
+	try? videoCompTrack.insertTimeRange(timeRangeForCurrentSlice, of: assetVideoTrack, at: CMTime(seconds: 0.0, preferredTimescale: 100))
+	try? audioCompTrack.insertTimeRange(timeRangeForCurrentSlice, of: assetAudioTrack, at: CMTime(seconds: 0.0, preferredTimescale: 100))
+	
+	
+	let exportSession = AVAssetExportSession(asset: composition, presetName: preferredPreset)!
+	exportSession.outputURL = URL(fileURLWithPath: destinationPath);
+	exportSession.outputFileType = AVFileTypeAppleM4V
+	exportSession.shouldOptimizeForNetworkUse = true
+	
+	exportSession.exportAsynchronously(completionHandler: {() -> Void in
+		DispatchQueue.main.async(execute: {() -> Void in
+			print(exportSession.progress);
+		})
+	});
+}
+
