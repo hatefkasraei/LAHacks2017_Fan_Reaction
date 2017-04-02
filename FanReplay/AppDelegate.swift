@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		emotion.readEmotions(json: api.getJSONwithIMAGE(grabFrameInJPEG(videoPath: "/Users/hatef/Desktop/fan/adidas.mp4" , timeInSeconds: 43.02)));
 		emotion.consolePrint()
 		
-		playBackWithinTimeRange(videoPath: "/Users/hatef/Desktop/fan/adidas.mp4", start: 1.0, end: 23.03, destinationPath: "/Users/hatef/Desktop/fan/outputed/saved.mp4");
+		playBackWithinTimeRange(videoPath: "/Users/hatef/Desktop/fan/adidas.mp4", start: 10.0, end: 20.0, destinationPath: "/Users/hatef/Desktop/fan/outputed/saved.mp4");
 		
 	}
 
