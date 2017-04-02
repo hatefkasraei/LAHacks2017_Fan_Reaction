@@ -71,21 +71,18 @@ class Emotions
 		print("-- -- -- -- -- -- --  -- -- -- -- -- -- -- --");
 	}
 	
-//	func sortedEmotions() -> [String : Int]
-//	{
-//		var to_return = [String : Int]();
-//		to_return["anger"] = Int(self.anger);
-//		to_return["fear"] = Int(self.fear);
-//		to_return["surprise"] = Int(self.surprise);
-//		to_return["contempt"] = Int(self.contempt);
-//		to_return["disgust"] = Int(self.disgust);
-//		to_return["happiness"] = Int(self.happiness);
-//		to_return["neutral"] = Int(self.neutral);
-//		to_return["sadness"] = Int(self.sadness);
-//		return to_return.sorted { (first: (k1: String, v1: Int), second: (k2: String, v2: Int)) -> Bool in
-//			return to_return[first.k1]! > to_return[second.k2]!;
-//		}
-//	}
+	func diffCheckWith(emotion : Emotions) -> [String : Double]
+	{
+		var to_return = [String : Double]()
+		to_return["anger"] = emotion.anger - self.anger
+		to_return["fear"] = emotion.fear - self.fear
+		to_return["surprise"] = emotion.surprise - self.surprise
+		to_return["disgust"] = emotion.disgust - self.disgust
+		to_return["happiness"] = emotion.happiness - self.happiness
+		to_return["neutral"] = emotion.neutral - self.neutral
+		to_return["sadness"] = emotion.sadness - self.sadness
+		return to_return
+	}
 	
 	private func _balanceData()
 	{
