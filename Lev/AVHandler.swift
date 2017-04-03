@@ -18,6 +18,13 @@ import CoreGraphics
 @objc class AVIHandler : NSObject
 {
 
+	func generate(time : Int) -> String
+{
+	var r : String = "/Users/hatef/Desktop/fan/outputed/"
+	r += time.description;
+	r += "reaction.mp4";
+	return r;
+}
 
 func grabFrameAndSaveOnDisk(videoPath : String, timeInSeconds : Double, destinationPath : String)
 {

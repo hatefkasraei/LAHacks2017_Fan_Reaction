@@ -76,6 +76,9 @@
     if ([session isRunning])
         [session stopRunning];
 }
+- (IBAction)label:(NSTextField *)sender {
+	
+}
 
 -(IBAction)takePicture_click : (id) sender {
 //    video_connection = nil;
@@ -111,34 +114,28 @@
 				[emotion consolePrint];
 					// cut video here!
 				
-//				NSString* path = @"/Users/hatef/Desktop/fan/outputed/";
-//				
-//				NSDate *date = [NSDate date];
-//				NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//				[formatter setDateFormat:@"%H:%M:%S"];
-//				
-//				NSString *timeString = [formatter stringFromDate:date];
-//				[timeString stringByAppendingString:@"Reaction.mp4"];
-//				
-//				[path stringByAppendingString:timeString];
-//				
-//				NSLog(path);
+				NSString* path = [avi generateWithTime:initTime];
 				
-				[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/messi.mp4" start:initTime - 5 end:initTime + 5 destinationPath:@"/Users/hatef/Desktop/fan/outputed/reaction.mp4"];
-			}
+				
+				NSLog(path);
+				
+//				[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/messi.mp4" start:initTime - 5 end:initTime + 5 destinationPath:@"/Users/hatef/Desktop/fan/outputed/reaction.mp4"];
+			
+				[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/messi.mp4" start:initTime - 5 end:initTime + 5 destinationPath:path];
+}
     }
     }];
 	
 	if (![session isRunning])
 		[session startRunning];
 	
-	NSLog(@"done...\n");
+//	NSLog(@"done...\n");
 }
 
 - (void) appendTime
 {
 	initTime++;
-	NSLog(@"!");
+//	NSLog(@"!");
 }
 
 @end
