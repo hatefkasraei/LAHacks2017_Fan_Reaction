@@ -13,7 +13,8 @@
 
 @implementation ViewController
 
-- (void) viewWillAppear {
+- (void) viewWillAppear
+{
     [super viewDidLoad];
     [super viewWillAppear];
     self.customView1 = [[CustomView alloc] initWithFrame : self.view.bounds];
@@ -21,15 +22,18 @@
     [self.view addSubview:self.customView1];
     [self initCaptureSession];
     [self setupPreviewLayer];
+	[session startRunning];
+	
+	emotion = [[Emotions alloc] init];
+	api = [[API alloc] init];
+	avi = [[AVIHandler alloc] init];
+	
+	initTime = 0;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
-    
-
-
-    // Do any additional setup after loading the view.
+	[NSTimer scheduledTimerWithTimeInterval:3.5f target:self selector:@selector(takePicture_click:) userInfo:nil repeats:YES];
 }
 
 - (void) initCaptureSession {
@@ -39,7 +43,6 @@
     AVCaptureDeviceInput *device_input = [[AVCaptureDeviceInput alloc]  initWithDevice : [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][0] error : nil];
     if ([session canAddInput : device_input])
         [session addInput : device_input];
-   
 }
 
 - (void) setupPreviewLayer {
@@ -63,18 +66,23 @@
 
 
 -(IBAction)startPreview_click : (id) sender {
-    if (![session isRunning])
-        [session startRunning];
+//    if (![session isRunning])
+//        [session startRunning];
+	timer = [[NSTimer alloc] init];
+	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(appendTime) userInfo:nil repeats:YES];
 }
 
 -(IBAction)stopPreview_click : (id) sender {
     if ([session isRunning])
         [session stopRunning];
 }
+- (IBAction)label:(NSTextField *)sender {
+	
+}
 
 -(IBAction)takePicture_click : (id) sender {
-    video_connection = nil;
-    
+//    video_connection = nil;
+	
     for (AVCaptureConnection *connection in still_image_output.connections) {
         for(AVCaptureInputPort *port in [connection inputPorts])
             if([[port mediaType] isEqual : AVMediaTypeVideo]) {
@@ -84,18 +92,50 @@
     if(video_connection)
         break;
     }
+	
     [still_image_output captureStillImageAsynchronouslyFromConnection : video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error){
         if (imageDataSampleBuffer != nil){
+			
             NSData *image_data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation : imageDataSampleBuffer];
+			
             NSData *image = [[NSImage alloc] initWithData : image_data];
+			
             self.imageView1.image = image;
+			
+			
+			emotion = [[Emotions alloc] init];
+			
+			[emotion readEmotionsWithJson: [api getJSONwithIMAGE: image]];
+
+			
+			if (emotion.anger > 40 || emotion.fear > 40 || emotion. happiness > 40)
+			{
+				NSLog(@"Now is: \n");
+				[emotion consolePrint];
+					// cut video here!
+				
+				NSString* path = [avi generateWithTime:initTime];
+				
+				
+				NSLog(path);
+				
+//				[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/messi.mp4" start:initTime - 5 end:initTime + 5 destinationPath:@"/Users/hatef/Desktop/fan/outputed/reaction.mp4"];
+			
+				[avi playBackWithinTimeRangeWithVideoPath:@"/Users/hatef/Desktop/fan/messi.mp4" start:initTime - 5 end:initTime + 5 destinationPath:path];
+}
     }
     }];
-    
-    
-
-
+	
+	if (![session isRunning])
+		[session startRunning];
+	
+//	NSLog(@"done...\n");
 }
 
+- (void) appendTime
+{
+	initTime++;
+//	NSLog(@"!");
+}
 
 @end
